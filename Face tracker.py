@@ -6,7 +6,7 @@ import serial
 import json
 import time
 
-import requests
+# import requests               ## API stuff
 
 # Specify the paths to the files
 prototxt_path = "./deploy.prototxt"
@@ -30,6 +30,10 @@ MIN_CONFI = 0.5
 
 # Delay for Ardiuno and python connection
 DELAY = 1
+
+# Offset for the lazer pointer's position
+xOffset = 0
+yOffset = 0
 
 # Slecting COM                                     Was using Serial COMs but that was dumb
 ports = serial.tools.list_ports.comports()
@@ -143,7 +147,7 @@ while True:
         thereIsFace = True
         data = {
                 "aimX": middle_x,
-                "aimY": corrected_y  
+                "aimY": corrected_y + yOffset   
             }
         print(f'(x: {data["aimX"]}, y: {data["aimY"]})      before correction y: {middle_y}')
         # Convert the JSON object to a string         
