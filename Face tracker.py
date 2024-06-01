@@ -6,6 +6,8 @@ import serial
 import json
 import time
 
+import threading
+
 # import requests               ## API stuff
 
 # Specify the paths to the files
@@ -64,6 +66,19 @@ time.sleep(2)  # Wait for the connection to establish
 
 thereIsFace = True
 
+
+# Function to display the raw camera feed without delay
+def display_raw_feed():
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        cv2.imshow('Raw Camera Feed', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+raw_feed_thread = threading.Thread(target=display_raw_feed)
+raw_feed_thread.start()
 
 
 # Loop to continuously get frames

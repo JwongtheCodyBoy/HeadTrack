@@ -31,3 +31,11 @@ Second upload
 			- put ruler on top of head at distance want to aim at, crop image so only ruler exist, width of img
 				is 1 feet in pixels
 			- find how far I am from camera then convert using unit above
+
+June 1, 2024		(later in the day)
+Third upload
+	- Python Script 
+		+ Added Thread so a second Window appears that shows what camera sees without delay
+	
+	- Arduino Sketch
+		+ No Changes
