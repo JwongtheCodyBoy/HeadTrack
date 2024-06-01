@@ -18,3 +18,16 @@ First Upload
 		+ Changes Radian to Degrees
 		
 		+ Serial print the Aim (x, y) received and the Degree of x and  y (Degree x, Degree y)
+
+
+June 1, 2024
+Second upload
+	- Python Script 
+		+ No change
+	
+	- Arduino Sketch
+		+ Arduino no longer uses Map, went back to using arctan to calculate
+		+ New calibrated feet to pixel
+			- put ruler on top of head at distance want to aim at, crop image so only ruler exist, width of img
+				is 1 feet in pixels
+			- find how far I am from camera then convert using unit above
