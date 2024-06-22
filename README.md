@@ -10,9 +10,11 @@ https://www.youtube.com/watch?v=fclTFQQvQFQ
 Extra video in case short attention span to setup virtual enviorment
 https://www.youtube.com/watch?v=GZbeL5AcTgw
 
-**Two main Scripts**:
-1. Python Script ("Face tracker" and "Face Tracker with no Ardiuno")
+**Four main Scripts**:
+1. Python Script ("Face tracker" or "Face Tracker with no Ardiuno")
 2. Arduino Sketch (in "sketch_may21a")
+3. deploy.prototxt (Face detection for OpenCV)
+4. res10_300x300_ssd_iter_140000_fp16.caffemodel (Data base used for OpenCV)
 
 Python Scripts has two options
 - First, Script where there is an Arduino connected to COMs. This script will open two windows displaying what computer sees and send JSON info to COMs for Arduino to do calculations with 
