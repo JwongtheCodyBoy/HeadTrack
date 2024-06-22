@@ -38,31 +38,31 @@ xOffset = 0
 yOffset = 0
 
 # Slecting COM to talk to Arduino
-ports = serial.tools.list_ports.comports()
-portsList= []
+# ports = serial.tools.list_ports.comports()
+# portsList= []
 
-print("Accessable COMs: ")
-for one in ports:
-    portsList.append(str(one))
-    print(str(one))
+# print("Accessable COMs: ")
+# for one in ports:
+#     portsList.append(str(one))
+#     print(str(one))
 
-if not portsList:
-    print("No ports found, ending program")
-    exit()
+# if not portsList:
+#     print("No ports found, ending program")
+#     exit()
 
-com = input("Select Com Port: ")
+# com = input("Select Com Port: ")
 
-for i in range(len(portsList)):
-    if portsList[i].startswith("COM"+str(com)):
-        use = "COM"+str(com)
-        print(f"using COM{str(com)}")
-    else:
-        print("No COMs found, Stoping program")
-        exit()
+# for i in range(len(portsList)):
+#     if portsList[i].startswith("COM"+str(com)):
+#         use = "COM"+str(com)
+#         print(f"using COM{str(com)}")
+#     else:
+#         print("No COMs found, Stoping program")
+#         exit()
 
-# Configure the serial port
-ser = serial.Serial(use, 9600) 
-time.sleep(2)  # Wait for the connection to establish
+# # Configure the serial port
+# ser = serial.Serial(use, 9600) 
+# time.sleep(2)  # Wait for the connection to establish
 
 thereIsFace = True
 
@@ -168,7 +168,7 @@ while True:
         # Convert the JSON object to a string         
         json_data = json.dumps(data)
         # Send the JSON string to the Arduino
-        ser.write(json_data.encode('utf-8'))
+        # ser.write(json_data.encode('utf-8'))
     elif not middle_x and thereIsFace:
         thereIsFace = False
         data = {
@@ -176,7 +176,7 @@ while True:
                 "aimY": 0  
             }
         json_data = json.dumps(data)
-        ser.write(json_data.encode('utf-8'))
+        # ser.write(json_data.encode('utf-8'))
         print(f'(x: {data["aimX"]}, y: {data["aimY"]})      no face found')
 
     # Display the resulting frame
@@ -186,13 +186,13 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-    if ser.in_waiting > 0:
-        response = ser.read_until().decode('utf-8').strip()
-        print(response)
+    # if ser.in_waiting > 0:
+    #     response = ser.read_until().decode('utf-8').strip()
+    #     print(response)
     time.sleep(DELAY)
 
 # Release the capture and close windows
 cap.release()
 cv2.destroyAllWindows()
 # Close Serial port
-ser.close()
+# ser.close()
