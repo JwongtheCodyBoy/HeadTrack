@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=fclTFQQvQFQ
 Extra video in case short attention span to setup virtual enviorment
 https://www.youtube.com/watch?v=GZbeL5AcTgw
 
-**Four main Scripts**:
+**Four main Files**:
 1. Python Script ("Face tracker" or "Face Tracker with no Ardiuno")
 2. Arduino Sketch (in "sketch_may21a")
 3. deploy.prototxt (Face detection for OpenCV)
