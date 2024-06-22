@@ -1,6 +1,6 @@
 #include <ArduinoJson.h>
 #include <Servo.h>
-                                         //1 feet (AMERICA) == 658 px 863       I put a ruler infront of a camera and cropped the size 
+                                         //1 feet (AMERICA) == 456        I put a ruler infront of a camera and cropped the size 
 const float FEET_TO_PIXELS = 456.0;      //1 feet (AMERICA) == 1152 px       https://everythingfonts.com/font/tools/units/ft-to-px (No clue if this works) (But I think it does, so until proven wrong I am right I think)
 const float DIST = 1.8 * FEET_TO_PIXELS;       
 
