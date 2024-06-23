@@ -3,6 +3,7 @@
 </p>
 
 # Head Tracker
+Video of it working: https://youtu.be/xdeVuuK6-L0 <br/>
 Basically a worst version of Michael Reeves's eye laser-er, I like my eyes so I can keep watching anime so I have it shoot my forehead instead
 
 Made with Python and OpenCV libary to find and target a person's face. Using two Ardiuno servos, one strap on to another so a laser can be shined 
@@ -46,3 +47,12 @@ Has an option to add offset to both X and Y positioning when sending JSON data (
 **Arduino**:<br/>
 Servo for X rotation (Yaw) default on Pin 9 <br/>
 Servo for Y rotation (Pitch) default on Pin 11
+
+
+<p align="center">
+<img src="https://github.com/JwongtheCodyBoy/HeadTrack/assets/128951946/d5385881-49e7-4c64-8ca9-447c46df051d" width="701" height="527">
+
+<img src="https://github.com/JwongtheCodyBoy/HeadTrack/assets/128951946/e9f7a338-0e0b-49ef-9a17-431ee72cc1c5" width="701" height="527">
+
+<img src="https://github.com/JwongtheCodyBoy/HeadTrack/assets/128951946/7c8e7b91-6fb8-44b6-889e-73beb9beb657" width="701" height="527">
+</p>
