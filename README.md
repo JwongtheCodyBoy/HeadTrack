@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://github.com/JwongtheCodyBoy/HeadTrack/assets/128951946/1468eb22-278e-4527-8964-6f42087710b8" width="701" height="527">
+</p>
+
 # Head Tracker
 Basically a worst version of Michael Reeves's eye laser-er, I like my eyes so I can keep watching anime so I have it shoot my forehead instead
 
